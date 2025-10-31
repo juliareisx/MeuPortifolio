@@ -1,24 +1,32 @@
 $(document).ready(function () {
   // ============================
-  // 1. Alternar Tema Claro/Escuro
-  // ============================
-  $('#toggleTheme').on('click', function () {
-    $('body').toggleClass('dark-theme');
-
-    // Salva a preferência no localStorage
-    if ($('body').hasClass('dark-theme')) {
-      localStorage.setItem('theme', 'dark');
-    } else {
-      localStorage.setItem('theme', 'light');
-    }
+ // Carrossel de Certificados
+const certificadosCarousel = $('.certificados-carousel');
+certificadosCarousel.on('wheel', function(e) {
+  e.preventDefault();
+  this.scrollBy({
+    left: e.originalEvent.deltaY < 0 ? -100 : 100,
+    behavior: 'smooth'
   });
+});
+  // ============================
 
-  // Ao carregar a página, aplica o tema salvo
-  if (localStorage.getItem('theme') === 'dark') {
-    $('body').addClass('dark-theme');
+  // 2. Projetos
+$(document).ready(function () {
+  const projetos = $('#projetos-container .project-card').toArray();
+  const container = $('#projetos-container');
+  container.empty(); // limpa o container original
+
+  const projetosPorLinha = 6;
+
+  // Cria uma nova linha a cada 6 projetos
+  for (let i = 0; i < projetos.length; i += projetosPorLinha) {
+    const linha = $('<div class="carousel-row"></div>');
+    $(projetos.slice(i, i + projetosPorLinha)).appendTo(linha);
+    container.append(linha);
   }
 
-  // 2. Filtro de Projetos
+  // Filtro de categorias (mantém o mesmo comportamento)
   $('.filter-btn').on('click', function () {
     const categoria = $(this).data('categoria');
 
@@ -29,6 +37,7 @@ $(document).ready(function () {
       $('.' + categoria).fadeIn();
     }
   });
+});
 
   // 3. Validação de Formulário
   $('#form-contato').on('submit', function (e) {

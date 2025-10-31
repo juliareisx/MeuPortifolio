@@ -1,74 +1,77 @@
 /* ====== RESET ====== */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f9f9fb;
     color: #222;
     transition: background-color 0.4s ease, color 0.4s ease;
 }
 
 .center {
     text-align: center;
-    padding: 20px;
+    padding: 30px 20px;
 }
 
 img.profile-img {
-    width: 150px;
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
     object-fit: cover;
-    margin: 20px auto;
+    margin: 25px auto;
     display: block;
-    border: 2.5px solid #f5caef75;
+    border: 3px solid #7b8cff;
     animation: float 3s ease-in-out infinite;
-        /* aplica a animação */
-    }
-    
-    @keyframes float {
-        0% {
-            transform: translateY(0px);
-        }
-    
-        50% {
-            transform: translateY(-15px);
-        }
-    
-        /* sobe */
-        100% {
-            transform: translateY(0px);
-        }
-    
-        /* volta */
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
     }
 
+    50% {
+        transform: translateY(-12px);
+    }
 
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+h1,
 h2,
 h3 {
+    font-weight: 600;
     margin-top: 0.5em;
 }
 
-blockquote {
-    border-left: 5px solid #007bff;
-    padding-left: 10px;
-    margin: 10px 0;
-    font-style: italic;
+h2 {
+    font-size: 1.6em;
+    color: #222;
+}
+
+p {
+    line-height: 1.6;
     color: #444;
 }
-/* Linguagens que uso */
+
+/* ====== BLOCO DE LINGUAGENS ====== */
 .skills {
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: center;
 }
 
 .skills h3 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #444;
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #333;
 }
 
 .skills-icons {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    font-size: 40px;
+    flex-wrap: wrap;
+    gap: 18px;
+    font-size: 45px;
+    padding: 10px;
 }
 
 .skills-icons i {
@@ -77,73 +80,166 @@ blockquote {
 }
 
 .skills-icons i:hover {
-    transform: scale(1.2);
-    color: #f5caef75;
+    transform: scale(1.25);
 }
 
-/* ====== PROJETOS ====== */
-.project-card {
-    background-color: #f7f7f7;
-    padding: 10px;
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 350px;
-    text-align: center;
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.project-link {
-    text-decoration: none;
-    color: inherit;
-    /* mantém a cor do texto */
-}
-
-.project-card {
-    cursor: pointer;
-    /* mostra a “mãozinha” */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-/* ====== CARROSSEL ====== */
-.carousel {
-    display: flex;
-    overflow-x: auto;
-    gap: 20px;
-    padding: 10px 0;
-    scroll-snap-type: x mandatory;
-}
-
-.carousel .project-card {
-    flex: 0 0 80%;
-    scroll-snap-align: center;
-}
-
-/* ====== SOCIAL LINKS ====== */
+/* ====== LINKS SOCIAIS ====== */
 .social-links {
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 1rem;
 }
 
 .social-links a {
     text-decoration: none;
-    color: #007bff;
-    font-weight: bold;
+    color: #4a63ff;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
 .social-links a:hover {
-    text-decoration: underline;
+    color: #2e47cc;
 }
 
+/* ====== CERTIFICADOS ====== */
+.certificados {
+    margin: 40px 5%;
+    text-align: center;
+}
+
+.certificados h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.certificados-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
+.certificados-carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.certificado-card {
+    flex: 0 0 260px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificado-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.certificado-card img {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+.certificado-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* ====== PROJETOS ====== */
+.project-card {
+    background-color: #fff;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 12px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    max-width: 330px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 12px;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.carousel-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 25px;
+    padding: 10px 0;
+    scroll-snap-type: x mandatory;
+    margin-bottom: 15px;
+}
+
+.carousel-row .project-card {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+}
+/* ====== FORMULÁRIO ====== */
+#form-contato {
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 25px;
+}
+
+#form-contato label {
+    font-weight: 600;
+    color: #333;
+}
+
+#form-contato input,
+#form-contato textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+#form-contato button {
+    width: 100%;
+    background-color: #4a63ff;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#form-contato button:hover {
+    background-color: #2e47cc;
+}
+
+/* ====== DEPOIMENTOS ====== */
+blockquote {
+    border-left: 5px solid #4a63ff;
+    padding-left: 12px;
+    margin: 15px 0;
+    font-style: italic;
+    color: #555;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 5px;
+    padding: 10px 15px;
+}
 
 /* ====== ANIMAÇÕES ====== */
 .fade-in {
@@ -162,24 +258,23 @@ blockquote {
     }
 }
 
-/* ====== FORMULÁRIO ====== */
-#form-contato input,
-#form-contato textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 700px) {
+    img.profile-img {
+        width: 130px;
+        height: 130px;
+    }
 
-#form-contato button {
-    width: 100%;
-}
+    .skills-icons {
+        font-size: 35px;
+        gap: 12px;
+    }
 
-/* ====== RESPONSIVIDADE EXTRA ====== */
-@media (max-width: 600px) {
     .carousel .project-card {
-        flex: 0 0 95%;
+        flex: 0 0 90%;
+    }
+
+    .certificado-card {
+        flex: 0 0 220px;
     }
 }

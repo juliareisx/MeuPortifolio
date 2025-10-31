@@ -40,25 +40,30 @@
             <h2>Júlia Cardoso</h2>
             <p>Desenvolvedora Web</p>
 
-            <a href="meu-curriculo.pdf" download class="ui-btn ui-btn-b ui-btn-inline">📄 Baixar Currículo</a>
+            <a href="meu-curriculo.pdf" download class="ui-btn ui-btn-b ui-btn-inline"> Baixar Currículo</a>
 
             <div class="social-links">
-                <a href="https://github.com/seuusuario" target="_blank">GitHub</a> |
+                <a href="https://github.com/juliareisx" target="_blank">GitHub</a> |
                 <a href="https://www.linkedin.com/in/j%C3%BAlia-cardoso-reis-4a0b1b37a/" target="_blank">LinkedIn</a>
             </div>
 
             <!-- Linguagens -->
             <div class="skills">
-                <h3> Tecnologias que uso</h3>
+                <h3> Linguagens e Tecnologias que uso:</h3>
                 <div class="skills-icons">
                     <i class="devicon-html5-plain colored"></i>
                     <i class="devicon-css3-plain colored"></i>
                     <i class="devicon-javascript-plain colored"></i>
                     <i class="devicon-php-plain colored"></i>
                     <i class="devicon-jquery-plain colored"></i>
+                    <i class="devicon-csharp-plain colored"></i>
+                    <i class="devicon-figma-plain colored"></i>
+                    <i class="devicon-github-plain colored"></i>
+                    <i class="devicon-mysql-plain colored"></i>
                 </div>
             </div>
         </div>
+
     </div> <!--  aqui fecha a Home certinho -->
 
 <!-- Página Sobre -->
@@ -97,107 +102,189 @@
             <li>Unir tecnologia com soluções criativas</li>
         </ul>
     </div>
+
+    <!-- Certificados de Cursos Livres -->
+    <div class="certificados">
+        <h3> Certificados de Cursos Livres</h3>
+        <div class="certificados-carousel">
+            <div class="certificado-card">
+                <img src="imagens/certificado1.jpg" alt="Certificado HTML e CSS">
+                <h4>HTML e CSS</h4>
+                <a href="certificados/html-css.pdf" target="_blank" class="ui-btn ui-mini ui-btn-b">Ver Certificado</a>
+            </div>
+            <div class="certificado-card">
+                <img src="imagens/certificado2.jpg" alt="Certificado JavaScript">
+                <h4>JavaScript</h4>
+                <a href="certificados/javascript.pdf" target="_blank" class="ui-btn ui-mini ui-btn-b">Ver Certificado</a>
+            </div>
+            <div class="certificado-card">
+                <img src="imagens/certificado3.jpg" alt="Certificado Figma">
+                <h4>Figma</h4>
+                <a href="certificados/figma.pdf" target="_blank" class="ui-btn ui-mini ui-btn-b">Ver Certificado</a>
+            </div>
+            <div class="certificado-card">
+                <img src="imagens/certificado4.jpg" alt="Certificado Canva">
+                <h4>Canva</h4>
+                <a href="certificados/canva.pdf" target="_blank" class="ui-btn ui-mini ui-btn-b">Ver Certificado</a>
+            </div>
+        </div>
+    </div>
+
 </div>
 
-    <!-- Página Projetos -->
-    <div data-role="page" id="projetos" class="pagina">
-        <div data-role="header" data-position="fixed">
-            <h1>Projetos</h1>
-            <a href="#home" data-icon="back" data-rel="back">Voltar</a>
+<!-- Página Projetos -->
+<div data-role="page" id="projetos" class="pagina">
+    <div data-role="header" data-position="fixed">
+        <h1>Projetos</h1>
+        <a href="#home" data-icon="back" data-rel="back">Voltar</a>
+    </div>
+
+    <div role="main" class="ui-content">
+
+        <h3>Filtrar por categoria:</h3>
+        <div data-role="controlgroup" data-type="horizontal">
+            <a href="#" class="filter-btn ui-btn ui-mini" data-categoria="todos">Todos</a>
+            <a href="#" class="filter-btn ui-btn ui-mini" data-categoria="web">Web</a>
+            <a href="#" class="filter-btn ui-btn ui-mini" data-categoria="mobile">Mobile</a>
         </div>
 
-        <div role="main" class="ui-content">
+        <!-- Contêiner principal (os projetos serão organizados automaticamente por linha via JS) -->
+        <div id="projetos-container">
 
-            <h3>Filtrar por categoria:</h3>
-            <div data-role="controlgroup" data-type="horizontal">
-                <a href="#" class="filter-btn ui-btn ui-mini" data-categoria="todos">Todos</a>
-                <a href="#" class="filter-btn ui-btn ui-mini" data-categoria="web">Web</a>
-                <a href="#" class="filter-btn ui-btn ui-mini" data-categoria="mobile">Mobile</a>
-            </div>
-
-        <div class="carousel">
             <!-- Projeto 1 -->
             <div class="project-card web fade-in">
                 <a href="https://juliareisx.github.io/DiaMundialDoAutismo/" target="_blank">
                     <img src="imagens/projeto1.png" alt="Projeto 1">
-                <h3>
-                    <a>Projeto Web 1</a>
-                </h3>
+                </a>
+                <h3>Projeto Web 1</h3>
                 <p>Um site responsivo para empresa X</p>
                 <a href="#modalProjeto1" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
             </div>
-        
+
             <!-- Projeto 2 -->
             <div class="project-card mobile fade-in">
                 <a href="https://juliareisx.github.io/LiberdadeDeImprensa/" target="_blank">
                     <img src="imagens/projeto2.png" alt="Projeto 2">
                 </a>
-                <h3>
-                    <a>App Mobile</a>
-                </h3>
+                <h3>App Mobile</h3>
                 <p>Aplicativo de agendamento</p>
                 <a href="#modalProjeto2" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
             </div>
 
-            </a>
-        
             <!-- Projeto 3 -->
-        <div class="project-card mobile fade-in">
-            <a href="https://seuprojeto3.com" target="_blank">
-                <img src="imagens/projeto3.jpg" alt="Projeto 3">
-            </a>
-            <h3>
-                <a href="https://seuprojeto3.com" target="_blank">App Mobile</a>
-            </h3>
-            <p>Aplicativo de agendamento</p>
-            <a href="#modalProjeto3" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
-        </div>
-
-
-
-            <!-- Modals -->
-            <div data-role="popup" id="modalProjeto1" class="ui-content">
-                <h3>Projeto Web 1</h3>
-                <p>Descrição detalhada do Projeto 1...</p>
-            </div>
-            <div data-role="popup" id="modalProjeto2" class="ui-content">
+            <div class="project-card mobile fade-in">
+                <a href="https://juliareisx.github.io/MinhaExperienciaSenac/" target="_blank">
+                    <img src="imagens/projeto3.png" alt="Projeto 3">
+                </a>
                 <h3>App Mobile</h3>
-                <p>Descrição detalhada do Projeto 2...</p>
-            </div>
-            <div data-role="popup" id="modalProjeto3" class="ui-content">
-                <h3>Dashboard Admin</h3>
-                <p>Descrição detalhada do Projeto 3...</p>
+                <p>Aplicativo de agendamento</p>
+                <a href="#modalProjeto3" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
             </div>
 
-        </div>
+            <!-- Projeto 4 -->
+            <div class="project-card mobile fade-in">
+                <a href="https://juliareisx.github.io/PizzaNostra/" target="_blank">
+                    <img src="imagens/projeto4.png" alt="Projeto 4">
+                </a>
+                <h3>App Mobile</h3>
+                <p>Aplicativo de agendamento</p>
+                <a href="#modalProjeto4" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
+            </div>
+
+            <!-- Projeto 5 -->
+            <div class="project-card mobile fade-in">
+                <a href="https://juliareisx.github.io/SiteParis/" target="_blank">
+                    <img src="imagens/projeto5.png" alt="Projeto 5">
+                </a>
+                <h3>App Mobile</h3>
+                <p>Aplicativo de agendamento</p>
+                <a href="#modalProjeto5" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
+            </div>
+
+            <!-- Projeto 6 -->
+            <div class="project-card web fade-in">
+                <a href="pdf/Winx Ebook SetembroAmarelo-T342.pdf" target="_blank">
+                    <img src="imagens/projeto6.png" alt="Projeto 6">
+                </a>
+                <h3>E-book</h3>
+                <p>Material digital desenvolvido no projeto escolar</p>
+                <a href="#modalProjeto6" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
+            </div>
+            <br>
+            <br>
+            <!-- Projeto 6 -->
+            <div class="project-card web fade-in">
+                <a href="pdf/Winx Ebook SetembroAmarelo-T342.pdf" target="_blank">
+                    <img src="imagens/projeto6.png" alt="Projeto 6">
+                </a>
+                <h3>E-book</h3>
+                <p>Material digital desenvolvido no projeto escolar</p>
+                <a href="#modalProjeto6" data-rel="popup" class="ui-btn ui-corner-all ui-mini">Ver mais</a>
+            </div>
+           
+        </div> <!-- Fim do container de projetos -->
     </div>
 
-    <!-- Página Contato -->
-    <div data-role="page" id="contato" class="pagina">
-        <div data-role="header" data-position="fixed">
-            <h1>Contato</h1>
-            <a href="#home" data-icon="back" data-rel="back">Voltar</a>
-        </div>
-
-        <div role="main" class="ui-content">
-            <form id="form-contato">
-                <label for="nome">Nome:</label>
-                <input type="text" name="nome" id="nome" required>
-
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" required>
-
-                <label for="mensagem">Mensagem:</label>
-                <textarea name="mensagem" id="mensagem" required></textarea>
-
-                <button type="submit" class="ui-btn ui-btn-b">Enviar</button>
-            </form>
-
-            <h3>Depoimentos</h3>
-            <blockquote>“depoimento1”<br>— pessoa, função</blockquote>
-            <blockquote>“depoimento2”<br>— pessoa, função</blockquote>
-        </div>
+    <!-- Popups -->
+    <div data-role="popup" id="modalProjeto1" class="ui-content">
+        <h3>Projeto Web 1</h3>
+        <p>Descrição detalhada do Projeto 1...</p>
     </div>
+
+    <div data-role="popup" id="modalProjeto2" class="ui-content">
+        <h3>App Mobile</h3>
+        <p>Descrição detalhada do Projeto 2...</p>
+    </div>
+
+    <div data-role="popup" id="modalProjeto3" class="ui-content">
+        <h3>App Mobile</h3>
+        <p>Descrição detalhada do Projeto 3...</p>
+    </div>
+
+    <div data-role="popup" id="modalProjeto4" class="ui-content">
+        <h3>App Mobile</h3>
+        <p>Descrição detalhada do Projeto 4...</p>
+    </div>
+
+    <div data-role="popup" id="modalProjeto5" class="ui-content">
+        <h3>App Mobile</h3>
+        <p>Descrição detalhada do Projeto 5...</p>
+    </div>
+
+    <div data-role="popup" id="modalProjeto6" class="ui-content">
+        <h3>E-book</h3>
+        <p>Descrição detalhada do Projeto 6...</p>
+    </div>
+</div>
+
+<!-- Página Contato -->
+<div data-role="page" id="contato" class="pagina">
+    <div data-role="header" data-position="fixed">
+        <h1>Contato</h1>
+        <a href="#home" data-icon="back" data-rel="back">Voltar</a>
+    </div>
+
+    <div role="main" class="ui-content">
+    <form id="form-contato" action="https://formspree.io/f/xnnglrjq" method="POST">
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" id="nome" required>
+    
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+    
+        <label for="mensagem">Mensagem:</label>
+        <textarea name="mensagem" id="mensagem" required></textarea>
+    
+        <button type="submit" class="ui-btn ui-btn-b">Enviar</button>
+    </form>
+
+
+        <h3>Depoimentos</h3>
+        <blockquote>“depoimento1”<br>— pessoa, função</blockquote>
+        <blockquote>“depoimento2”<br>— pessoa, função</blockquote>
+    </div>
+</div>
+
 
     <!-- JS personalizado -->
     <script src="js/script.js"></script>
